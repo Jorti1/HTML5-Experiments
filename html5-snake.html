@@ -6,19 +6,19 @@
 
 		<meta charset="utf-8" />
 
-		<title>HTML5 Snake</title>
+		<title>Snake Remastered</title>
 
 		<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold' rel='stylesheet' type='text/css'>
 
 		<style type="text/css">
 
 			body {
-				background:#9c9;
+				background:#black;
 				text-align:center;
 			}
 
 			canvas {
-				background:#9c9;
+				background:#black;
 				-webkit-box-shadow:0 0 20px #000;
 				-moz-box-shadow: 0 0 20px #000;
 				box-shadow:0 0 20px #000;
@@ -80,7 +80,7 @@
 
 				document.body.appendChild(canvas);
 
-				function placeFood() {
+				function placefood() {
 
 					var x, y;
 
@@ -102,7 +102,7 @@
 						Y = (Y+30)%30;
 					}
 
-					--inc_score;
+					--inc_sco;
 
 					if (turn.length) {
 						dir = turn.pop();
@@ -141,7 +141,7 @@
 
 					} else if (!turn.length) {
 
-						if (confirm("You lost! Play again? Your Score is " + score)) {
+						if confrim("You lost! Play again? Your Score was " + score)) {
 
 							ctx.clearRect(0, 0, 450, 300);
 
